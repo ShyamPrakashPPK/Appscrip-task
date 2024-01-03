@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,11 +20,264 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: white;
 }
+
+/* custon css */
+
+.navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 2rem 1rem;
+}
+
+
+.navbar-desktop .logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.navbar-desktop .small-logo {
+  width: 36px;
+  height: 36px;
+  fill: black;
+  margin-left: 96px;
+}
+
+.text-logo {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-left: 25vh;
+}
+
+.navbar-desktop .icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-desktop .icon {
+  margin-right: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #fff;
+  color: black;
+  padding: 10px;
+  gap: 64px;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+
+
+.mobile-menu-open .navbar-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 2rem 1rem;
+  }
+
+  .navbar-mobile .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-mobile .small-logo {
+    width: 36px;
+    height: 36px;
+    fill: black;
+    margin-right: 0.5rem;
+  }
+
+  .navbar-mobile .text-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .icons-container {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    /* Align menu items horizontally */
+    background-color: bisque;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .mobile-menu ul li {
+    padding: 8px;
+    margin-right: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-nav-section-1 {
+    display: flex;
+    padding: 10px;
+  }
+}
+
+
+
+/* styles.css */
+
+
+
+.product-image {
+  width: auto;
+  height: 399px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image2 {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+.product-details h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.product-details p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* product card */
+/* styles.css */
+
+.product-list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.products-container {
+  display: grid;
+  gap: 20px;
+}
+
+/* Large screens (laptops) */
+@media (min-width: 1624px) {
+  .products-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Normal tablets */
+@media (max-width: 1623px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* sidebar */
+.sidebar{
+ color: #252020;
+}
+
+
+
+
+
+/* text area */
+
+
+.text-area {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--Misc-Text, #252020);
+  padding-top: 2rem;
+}
+
+.text-area h1 {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.text-area h4 {
+  color: var(--Text-Text, #252020);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+}
+
+
